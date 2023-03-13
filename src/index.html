@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general-style.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="shortcut icon" href="img/ic_bollo.png">
+    <title>BOLLO ATELIÊ</title>
+    <script src="js/carousel.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho da Página -->
+    <header>
+        <!-- Área de Navegação do Site -->
+        <nav class="w-full max-h-7 bg-marrom-100" id="nav">
+            <ul class="font-semibold text-sm flex h-full items-center justify-evenly text-bege-100" id="list">
+                <li><a href="index.html" class="hover:text-white">HOME</a></li>
+                <li><a href="menu.html" class="hover:text-white">CARDÁPIO</a></li>
+                <li><a href="about.html" class="hover:text-white">SOBRE</a></li>
+            </ul>
+        </nav>
+        <!-- Menu -->
+        <div id="menu" class="flex justify-center">
+            <div id="menu-itens" class="flex items-center">
+                <!-- Logo da Empresa -->
+                <a id="ic-bollo" href="index.html" class=" w-[260px] h-[200px] flex">
+                    <img class="" src="img/ic_bollo.png" alt="ic_bollo">
+                </a>
+                <!-- Campo de Pesquisa do Site -->
+                <div id="search-container" class="flex h-11 px-4 py-2 w-[600px] items-center bg-bege-100 rounded-lg">
+                    <form id="search-form" class="flex w-full h-full items-center justify-center" action="">
+                        <input id="search"
+                            class="flex bg-transparent w-full max-h-full text-marrom-100 placeholder:text-marrom-100 text-sm placeholder:text-sm outline-none"
+                            type="text" placeholder="Olá, o que você procura?" autocomplete="off">
+                        <button id="ic-search" class="flex h-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="flex w-full h-full">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <!-- Menu do Usuário -->
+                <div id="user-container" class="flex justify-center items-center ml-6 w-fit break-keep">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div id="user-menu" class="flex ml-2 flex-col" href="">
+                        <span class="font-bold text-marrom-100 break-keep whitespace-nowrap">
+                            Olá Visitante
+                        </span>
+                        <br />
+                        <span class="text-marrom-100 break-keep whitespace-nowrap text-xs">
+                            Faça
+                            <a class="hover:text-bege-100" href="login.html">login</a>
+                            ou
+                            <a class="hover:text-bege-100" href="register.html">cadastro</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Corpo do Site -->
+    <!-- Apresentação dos Produtos que a Empresa Oferece -->
+    <div id="slider-container"
+        class="flex justify-center items-center overflow-hidden w-{800px} h-[400px] m-auto border-4 border-marrom-100">
+        <div id="slides" class="flex w-full h-full">
+            <!-- Slider-Radios -->
+            <input type="radio" name="radio" id="radio1" class="hidden">
+            <input type="radio" name="radio" id="radio2" class="hidden">
+            <input type="radio" name="radio" id="radio3" class="hidden">
+            <!-- Slider-Images -->
+            <div id="carousel-container" class="flex w-full h-full scroll-m-20 relative">
+            </div>
+        </div>
+        <!-- Manual-Navegation -->
+        <div id="manual-nav" class="flex justify-center absolute w-[800px] mt-[300px]">
+            <label for="radio1" id="manual1"
+                class="border-[2px] border-solid border-white p-1 rounded-md cursor-pointer mr-2 delay-[0.2s] hover:bg-white bg-white"
+                onclick="manualScroll(0)"></label>
+            <label for="radio2" id="manual2"
+                class="border-[2px] border-solid border-white p-1 rounded-md cursor-pointer mr-2 delay-[0.2s] hover:bg-white"
+                onclick="manualScroll(1)"></label>
+            <label for="radio2" id="manual2"
+                class="border-[2px] border-solid border-white p-1 rounded-md cursor-pointer delay-[0.2s] hover:bg-white"
+                onclick="manualScroll(2)"></label>
+        </div>
+    </div>
+
+    <!-- Rodapé do Site -->
+    <nav class="flex mt-[81px] max-h-full h-7 bg-marrom-100 items-center p-[20px]">
+        <span class="text-bege-100 font-semibold text-sm m-[20px]">Criado por: <a
+                href="https://www.linkedin.com/in/cau%C3%AA-leal-65b279206/" target="_blank"
+                class="hover:text-white">C.L.R</a></span>
+        <div id="">
+        </div>
+    </nav>
+</body>
+
+</html>
