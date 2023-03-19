@@ -1,18 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/general-style.css">
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="shortcut icon" href="img/ic_bollo.png">
     <title>BOLLO ATELIÊ</title>
 </head>
 
 <body>
+    <!-- Cabeçalho da Página -->
     <header>
-        <nav class="max-h-full h-7 bg-marrom-100" id="nav">
+        <!-- Área de Navegação do Site -->
+        <nav class="w-full max-h-7 bg-marrom-100" id="nav">
             <ul class="font-semibold text-sm flex h-full items-center justify-evenly text-bege-100" id="list">
                 <li><a href="index.html" class="hover:text-white">HOME</a></li>
                 <li><a href="menu.html" class="hover:text-white">CARDÁPIO</a></li>
                 <li><a href="about.html" class="hover:text-white">SOBRE</a></li>
             </ul>
         </nav>
+    </header>
+
+    <div id="register-container" class="flex justify-center items-center w-full">
+        <div id="register"
+            class="flex flex-col mt-10 bg-marrom-100 justify-center items-center h-[600px] w-[750px] rounded-lg">
+            <h2 class="text-bege-100 mt-[-100px] font-bold text-[1.75rem]">Cadastre-se</h2>
+            <fieldset class="p-4 border-2 border-bege-100">
+                <legend class="text-bege-100 font-semibold">Dados Usuário</legend>
+                <form id="form-user" action="">
+                    <div class="flex mt-1 justify-evenly">
+                        <div id="name-container"
+                            class="flex flex-col w-[325px] rounded-lg h-9 mr-6 justify-center bg-bege-100">
+                            <input id="name" type="text"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Nome" autocomplete="off" required>
+                        </div>
+                        <div id="lat-name-container"
+                            class="flex flex-col w-[300px] rounded-lg h-9 justify-center bg-bege-100">
+                            <input id="lat-name" type="text"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Sobrenome" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="flex mt-1">
+                        <div id="email-container"
+                            class="flex flex-col rounded-lg w-[400px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="email" type="email"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="E-mail" autocomplete="off" required>
+                        </div>
+                        <div id="cel-container" class="flex flex-col rounded-lg h-9 justify-center bg-bege-100">
+                            <input id="cel" type="number"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Telefone" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <span class="text-bege-100 font-semibold">Gênero</span>
+                    <div class="flex w-full">
+                        <div id="male-container"
+                            class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
+                            <label for="" class="text-marrom-100 opacity-60">
+                                Masculino:
+                                <input type="radio" class="bg-transparent">
+                            </label>
+                        </div>
+                        <div id="feminine-container"
+                            class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
+                            <label for="" class="text-marrom-100 opacity-60">
+                                Feminino:
+                                <input type="radio" class="bg-transparent">
+                            </label>
+                        </div>
+                        <div id="others-container"
+                            class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
+                            <label for="" class="text-marrom-100 opacity-60">
+                                Outros:
+                                <input type="radio" class="bg-transparent">
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <form id="form-address" action="">
+                    <div class="flex mt-4">
+                        <div id="addres-container"
+                            class="flex flex-col rounded-lg w-[400px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="address" type="text"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Endereço" autocomplete="off" required>
+                        </div>
+                        <div id="number-container"
+                            class="flex flex-col rounded-lg w-[200px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="number" type="number"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Número" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="flex mt-4 justify-around">
+                        <div id="zip-code-container"
+                            class="flex flex-col rounded-lg w-[300px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="zip-code" type="text"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="CEP" autocomplete="off" required>
+                        </div>
+                        <div id="complement-container"
+                            class="flex flex-col rounded-lg w-[300px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="complement" type="text"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Complemento" autocomplete="off">
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+            <div
+                class="flex text-bege-100 p-2 items-center w-[200px] justify-center mt-10 border-2 border-white rounded-md cursor-pointer hover:scale-110">
+                <button>
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé do Site -->
+    <nav class="flex mt-[81px] max-h-full h-7 bg-marrom-100 justify-between items-center p-[20px]">
+        <span class="text-bege-100 font-semibold text-sm m-[20px]">Criado por: <a
+                href="https://www.linkedin.com/in/cau%C3%AA-leal-65b279206/" target="_blank"
+                class="hover:text-white">C.L.R</a></span>
+        <div id="contacts" class="flex justify-around">
+            <a href="https://www.facebook.com/bolloatelie/" class="h-6 w-6 mr-12" target="_blank">
+                <img src="img/ic_f.png" alt="ic_f" class="h-6 w-6">
+            </a>
+            <a href="https://www.instagram.com/bolloatelie/" class="h-6 w-6 mr-12" target="_blank">
+                <img src="img/ic_ig.png" alt="ic_f" class="h-6 w-6">
+            </a>
+            <a href="https://l.instagram.com/?u=http%3A%2F%2Fapi.whatsapp.com%2Fsend%3F1%3Dpt_BR%26phone%3D5551994545097&e=AT1f4QkO3J_s0eH-VFIn1LEqURJj1LcS7AA5watd21w1S3MIc0GoLhkNZPbvr6b4O9KDkjglWaVCspwxF2uyfYSETFa28yDjjdIPSw"
+                class="h-6 w-6 mr-12" target="_blank">
+                <img src="img/ic_wpp.png" alt="ic_f" class="h-6 w-6">
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>
