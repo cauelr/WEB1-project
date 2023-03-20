@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/general-style.css">
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="shortcut icon" href="img/ic_bollo.png">
+    <script src="js/register.js"></script>
     <title>BOLLO ATELIÊ</title>
 </head>
 
@@ -23,13 +24,14 @@
             </ul>
         </nav>
     </header>
-
+    <!-- Campos de Registro -->
     <div id="register-container" class="flex justify-center items-center w-full">
         <div id="register"
             class="flex flex-col mt-10 bg-marrom-100 justify-center items-center h-[600px] w-[750px] rounded-lg">
             <h2 class="text-bege-100 mt-[-100px] font-bold text-[1.75rem]">Cadastre-se</h2>
             <fieldset class="p-4 border-2 border-bege-100">
                 <legend class="text-bege-100 font-semibold">Dados Usuário</legend>
+                <!-- Dados do Usuário -->
                 <form id="form-user" action="">
                     <div class="flex mt-1 justify-evenly">
                         <div id="name-container"
@@ -40,7 +42,7 @@
                         </div>
                         <div id="lat-name-container"
                             class="flex flex-col w-[300px] rounded-lg h-9 justify-center bg-bege-100">
-                            <input id="lat-name" type="text"
+                            <input id="last-name" type="text"
                                 class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
                                 placeholder="Sobrenome" autocomplete="off" required>
                         </div>
@@ -58,31 +60,46 @@
                                 placeholder="Telefone" autocomplete="off" required>
                         </div>
                     </div>
+                    <div class="flex mt-1">
+                        <div id="password-container"
+                            class="flex flex-col rounded-lg w-[200px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="password" type="password"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Senha" autocomplete="off" required>
+                        </div>
+                        <div id="confirm-password-container"
+                            class="flex flex-col rounded-lg w-[200px] h-9 mr-6 justify-center bg-bege-100">
+                            <input id="confirm-password" type="password"
+                                class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
+                                placeholder="Confirme a senha" autocomplete="off" required>
+                        </div>
+                    </div>
                     <span class="text-bege-100 font-semibold">Gênero</span>
                     <div class="flex w-full">
                         <div id="male-container"
                             class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
                             <label for="" class="text-marrom-100 opacity-60">
                                 Masculino:
-                                <input type="radio" class="bg-transparent">
+                                <input id="male" name="sex" type="radio" class="bg-transparent">
                             </label>
                         </div>
-                        <div id="feminine-container"
+                        <div id="female-container"
                             class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
                             <label for="" class="text-marrom-100 opacity-60">
                                 Feminino:
-                                <input type="radio" class="bg-transparent">
+                                <input id="female" name="sex" type="radio" class="bg-transparent">
                             </label>
                         </div>
                         <div id="others-container"
                             class="flex flex-col p-1 rounded-lg h-9 mr-6 justify-center bg-bege-100">
                             <label for="" class="text-marrom-100 opacity-60">
                                 Outros:
-                                <input type="radio" class="bg-transparent">
+                                <input id="others" name="sex" type="radio" class="bg-transparent">
                             </label>
                         </div>
                     </div>
                 </form>
+                <!-- Dados de Endereço -->
                 <form id="form-address" action="">
                     <div class="flex mt-4">
                         <div id="addres-container"
@@ -101,7 +118,7 @@
                     <div class="flex mt-4 justify-around">
                         <div id="zip-code-container"
                             class="flex flex-col rounded-lg w-[300px] h-9 mr-6 justify-center bg-bege-100">
-                            <input id="zip-code" type="text"
+                            <input id="zip-code" type="number"
                                 class="ml-1 bg-transparent outline-none h-full font-medium text-marrom-100 placeholder:text-marrom-100 opacity-60 required:border-red-600"
                                 placeholder="CEP" autocomplete="off" required>
                         </div>
@@ -114,11 +131,14 @@
                     </div>
                 </form>
             </fieldset>
-            <div
-                class="flex text-bege-100 p-2 items-center w-[200px] justify-center mt-10 border-2 border-white rounded-md cursor-pointer hover:scale-110">
-                <button>
-                    Cadastrar
-                </button>
+            <!-- Botão para Cadastro -->
+            <div class="flex text-bege-100 p-2 items-center w-[200px] justify-center mt-10 border-2 border-white rounded-md cursor-pointer hover:scale-110"
+                onclick="register()">
+                Cadastrar
+            </div>
+            <div id="text-container" class="items-center text-center mt-2 justify-center">
+                <!-- Cadastrado com sucesso!! (Em verde) -->
+                <!-- Texto de "erro" (Em vermelho) -->
             </div>
         </div>
     </div>
